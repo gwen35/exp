@@ -18,6 +18,7 @@ body {
   font-family: 'Poppins', sans-serif;
   color: var(--text-light);
   background-color: var(--bg-dark);
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
@@ -26,17 +27,22 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: rgba(15, 23, 42, 0.9);
+  background: rgba(15, 23, 42, 0.85);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  z-index: 10;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.navbar.scrolled {
   backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 700;
 }
 
@@ -60,25 +66,45 @@ nav a:hover {
   color: var(--accent);
 }
 
-/* Hero */
+/* Hero Section */
 .hero {
+  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(to bottom right, #1e3a8a, #0f172a);
+  overflow: hidden;
+  background: radial-gradient(circle at center, #1e3a8a, #0f172a);
+}
+
+.stars {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+  animation: moveStars 60s linear infinite;
+  opacity: 0.3;
+}
+
+@keyframes moveStars {
+  from {transform: translate(0, 0);}
+  to {transform: translate(-500px, -500px);}
+}
+
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 700px;
   padding: 2rem;
 }
 
 .hero-content h2 {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   margin-bottom: 1rem;
 }
 
 .hero-content p {
-  max-width: 600px;
-  margin: auto;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
@@ -87,17 +113,37 @@ nav a:hover {
   color: var(--accent);
 }
 
+/* Fade-in Animations */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.delay-1 { animation-delay: 0.4s; }
+.delay-2 { animation-delay: 0.8s; }
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button */
 .btn {
   background-color: var(--accent);
   color: var(--bg-dark);
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   text-decoration: none;
-  transition: background-color 0.3s;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
 .btn:hover {
   background-color: var(--accent-hover);
+  transform: scale(1.05);
 }
 
 .btn.small {
@@ -113,7 +159,7 @@ nav a:hover {
 }
 
 .projects h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   font-size: 2rem;
 }
 
@@ -128,11 +174,14 @@ nav a:hover {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.6s ease;
 }
 
-.card:hover {
-  transform: translateY(-10px);
+.card.visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .card img {
