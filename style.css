@@ -1,0 +1,171 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+:root {
+  --bg-dark: #0f172a;
+  --bg-light: #1e293b;
+  --text-light: #f8fafc;
+  --accent: #38bdf8;
+  --accent-hover: #0ea5e9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--text-light);
+  background-color: var(--bg-dark);
+  scroll-behavior: smooth;
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(15, 23, 42, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 10;
+  backdrop-filter: blur(10px);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.logo span {
+  color: var(--accent);
+}
+
+nav ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-light);
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* Hero */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(to bottom right, #1e3a8a, #0f172a);
+  padding: 2rem;
+}
+
+.hero-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: var(--accent);
+}
+
+.btn {
+  background-color: var(--accent);
+  color: var(--bg-dark);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn.small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+/* Projects */
+.projects {
+  padding: 6rem 2rem;
+  background-color: var(--bg-light);
+  text-align: center;
+}
+
+.projects h2 {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.card {
+  background-color: var(--bg-dark);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 1rem 0;
+}
+
+.card p {
+  padding: 0 1rem;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+
+/* Contact */
+.contact {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+
+.contact a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--bg-dark);
+  font-size: 0.9rem;
+  color: #94a3b8;
+}
