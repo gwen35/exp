@@ -63,7 +63,7 @@ closeBtn && closeBtn.addEventListener('click', () => {
 
 // close modal on backdrop click
 modal && modal.addEventListener('click', (e) => {
-  if (e.target === modal) {
+  if (e.target === modal) { 
     modal.classList.remove('show');
   }
 });
