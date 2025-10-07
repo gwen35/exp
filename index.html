@@ -1,243 +1,63 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Gwendal</title>
-
-  <!-- fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
-
-  <!-- styles -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio de Gwendal</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- GSAP + ScrollReveal via CDN -->
-  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-  <script src="https://unpkg.com/scrollreveal"></script>
-
-  <!-- main script -->
   <script defer src="script.js"></script>
 </head>
 <body>
-
-  <!-- PRELOADER -->
-  <div id="preloader" aria-hidden="true">
-    <div class="loader">
-      <svg viewBox="0 0 100 100" class="logo-anim" aria-hidden="true">
-        <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="6" fill="none" stroke-linecap="round"/>
-      </svg>
-      <div class="loader-text">Gwendal</div>
-    </div>
-  </div>
-
-  <!-- NAV -->
-  <header class="nav">
-    <div class="nav-inner">
-      <div class="brand">
-        <a href="#home">Gwen<span>dal</span></a>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="#home">Accueil</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#projects">Projets</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <button class="nav-toggle" aria-label="ouvrir le menu">☰</button>
-    </div>
+  <!-- ======== NAVBAR ======== -->
+  <header class="navbar">
+    <h1 class="logo">Gwen<span>dal</span></h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Accueil</a></li>
+        <li><a href="#projects">Projets</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- HERO -->
-  <main>
-    <section id="home" class="hero">
-      <div class="hero-bg"></div>
-      <div class="hero-content">
-        <h1 class="hero-title">Je suis <span class="accent">Gwendal</span>, créateur web & développeur</h1>
-        <p class="hero-sub">Je conçois des expériences numériques visuelles, rapides et mémorables. Ici se trouvent mes projets et designs.</p>
-        <div class="hero-cta">
-          <a class="btn" href="#projects">Voir mes projets</a>
-          <a class="btn ghost" href="#contact">Me contacter</a>
-        </div>
-      </div>
-
-      <!-- play / overlay style like TikTok card -->
-      <div class="play-overlay" title="Aperçu">
-        <div class="play-triangle"></div>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section about">
-      <div class="container">
-        <div class="split">
-          <div class="left">
-            <h2>À propos</h2>
-            <p>Étudiant & passionné par le design et le développement web. J'aime transformer des idées en interfaces élégantes et interactives. Spécialisé en HTML/CSS/JS, responsive design, petites animations et prototypes.</p>
-            <ul class="skills">
-              <li>HTML & CSS</li>
-              <li>JavaScript (ES6+)</li>
-              <li>Design UI / UX</li>
-              <li>Git & GitHub</li>
-            </ul>
-          </div>
-          <div class="right">
-            <div class="card-profile">
-              <img src="https://source.unsplash.com/400x400/?portrait" alt="Portrait" />
-              <div class="card-info">
-                <h3>Gwendal</h3>
-                <p>Développeur Web</p>
-                <div class="socials">
-                  <a href="https://github.com/gwen35" target="_blank" rel="noopener">GitHub</a>
-                  <a href="#">LinkedIn</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SERVICES -->
-    <section id="services" class="section services">
-      <div class="container">
-        <h2>Services</h2>
-        <p class="subtle">Ce que je propose</p>
-
-        <div class="services-grid">
-          <div class="service card-tilt" data-sr>
-            <div class="icon">🎨</div>
-            <h3>Design UI/UX</h3>
-            <p>Wireframes, maquettes et prototypes haute-fidélité pour des interfaces claires et engageantes.</p>
-            <a class="link-more" href="#">En savoir +</a>
-          </div>
-
-          <div class="service card-tilt" data-sr>
-            <div class="icon">💻</div>
-            <h3>Développement Front-end</h3>
-            <p>Sites performants, responsive et accessibles avec HTML/CSS/JS moderne.</p>
-            <a class="link-more" href="#">En savoir +</a>
-          </div>
-
-          <div class="service card-tilt" data-sr>
-            <div class="icon">⚡</div>
-            <h3>Animations & Prototypes</h3>
-            <p>Micro-interactions, transitions et animations pour améliorer l’expérience utilisateur.</p>
-            <a class="link-more" href="#">En savoir +</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section projects">
-      <div class="container">
-        <div class="section-head">
-          <h2>Latest Projects</h2>
-          <p class="subtle">Cliquer sur une carte pour voir les détails</p>
-        </div>
-
-        <div class="projects-grid">
-          <!-- Project card template: update data attributes for real projects -->
-          <article class="project-card" tabindex="0" data-title="Projet — Portfolio" data-desc="Site vitrine avec animations et sections projets. Construit en HTML/CSS/JS." data-img="https://source.unsplash.com/800x600/?portfolio,website" data-link="#">
-            <div class="thumb">
-              <img src="https://source.unsplash.com/800x600/?portfolio,website" alt="Projet 1">
-              <div class="thumb-overlay">
-                <button class="view">Voir</button>
-              </div>
-            </div>
-            <div class="meta">
-              <h3>Portfolio Vitrine</h3>
-              <p class="muted">Design & Front-end</p>
-            </div>
-          </article>
-
-          <article class="project-card" tabindex="0" data-title="Golden Metal — Branding" data-desc="Identité visuelle complète pour Golden Metal, charte et mockups." data-img="https://source.unsplash.com/800x600/?branding,design" data-link="#">
-            <div class="thumb">
-              <img src="https://source.unsplash.com/800x600/?branding,design" alt="Projet 2">
-              <div class="thumb-overlay">
-                <button class="view">Voir</button>
-              </div>
-            </div>
-            <div class="meta">
-              <h3>Golden Metal</h3>
-              <p class="muted">Branding</p>
-            </div>
-          </article>
-
-          <article class="project-card" tabindex="0" data-title="App Mobile — Food" data-desc="Prototype d'application mobile livraison, UI/UX, animations." data-img="https://source.unsplash.com/800x600/?app,mobile" data-link="#">
-            <div class="thumb">
-              <img src="https://source.unsplash.com/800x600/?app,mobile" alt="Projet 3">
-              <div class="thumb-overlay">
-                <button class="view">Voir</button>
-              </div>
-            </div>
-            <div class="meta">
-              <h3>FoodApp</h3>
-              <p class="muted">Prototype</p>
-            </div>
-          </article>
-
-          <article class="project-card" tabindex="0" data-title="Packaging — Palm Brand" data-desc="Visuels packaging et guidelines pour Palm Brand." data-img="https://source.unsplash.com/800x600/?packaging,product" data-link="#">
-            <div class="thumb">
-              <img src="https://source.unsplash.com/800x600/?packaging,product" alt="Projet 4">
-              <div class="thumb-overlay">
-                <button class="view">Voir</button>
-              </div>
-            </div>
-            <div class="meta">
-              <h3>Palm Brand</h3>
-              <p class="muted">Packaging</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section contact">
-      <div class="container">
-        <h2>Contact</h2>
-        <p class="subtle">Besoin d’un site, d’un design ou d’un coup de main ? Parlons-en.</p>
-
-        <form id="contact-form" class="contact-form">
-          <div class="form-row">
-            <input type="text" name="name" placeholder="Ton nom" required>
-            <input type="email" name="email" placeholder="Ton email" required>
-          </div>
-          <textarea name="message" placeholder="Ton message..." required></textarea>
-          <button class="btn" type="submit">Envoyer</button>
-        </form>
-
-        <p class="muted small">Ou contacte-moi directement : <a href="mailto:gmorvan18@gmail.com">gmorvan18@gmail.com</a></p>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> Gwendal — Portfolio</p>
+  <!-- ======== ACCUEIL ======== -->
+  <section id="home" class="hero">
+    <div class="stars"></div>
+    <div class="hero-content">
+      <h2 class="fade-in-up">Bienvenue dans mon univers 🌌</h2>
+      <p class="fade-in-up delay-1">Je suis <span class="highlight">Gwendal</span>, passionné par le <strong>développement web</strong> et la <strong>création numérique</strong>.</p>
+      <a href="#projects" class="btn fade-in-up delay-2">Voir mes projets</a>
     </div>
+  </section>
+
+  <!-- ======== PROJETS ======== -->
+  <section id="projects" class="projects">
+    <h2>💼 Mes projets</h2>
+    <div class="projects-grid">
+      <div class="card hidden">
+        <img src="https://source.unsplash.com/600x400/?code" alt="Projet 1">
+        <h3>Projet 1</h3>
+        <p>Description rapide du projet ici. Tu pourras ajouter ton lien GitHub ou site.</p>
+        <a href="#" class="btn small">Voir le projet</a>
+      </div>
+
+      <div class="card hidden">
+        <img src="https://source.unsplash.com/600x400/?app" alt="Projet 2">
+        <h3>Projet 2</h3>
+        <p>Une idée, une app, une création graphique — c’est ici !</p>
+        <a href="#" class="btn small">Voir le projet</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT ======== -->
+  <section id="contact" class="contact">
+    <h2>📬 Me contacter</h2>
+    <p>Retrouve-moi sur <a href="https://github.com/gwen35" target="_blank">GitHub</a> ou contacte-moi : <strong>gmorvan18@gmail.com</strong>.</p>
+  </section>
+
+  <footer>
+    <p>© 2025 Gwendal — Portfolio personnel ✨</p>
   </footer>
-
-  <!-- PROJECT MODAL -->
-  <div id="project-modal" class="modal" aria-hidden="true">
-    <div class="modal-panel">
-      <button class="modal-close" aria-label="Fermer">✕</button>
-      <div class="modal-body">
-        <img id="modal-img" src="" alt="">
-        <div class="modal-content">
-          <h3 id="modal-title"></h3>
-          <p id="modal-desc"></p>
-          <div class="modal-actions">
-            <a id="modal-link" class="btn" href="#" target="_blank" rel="noopener">Voir le projet</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </body>
 </html>
