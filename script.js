@@ -98,3 +98,4 @@ function typeHeroText() {
 
 // Lancer l'effet après le chargement de la page
 window.addEventListener("DOMContentLoaded", typeHeroText);
+
