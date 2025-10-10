@@ -79,3 +79,22 @@ contactForm && contactForm.addEventListener('submit', (e) => {
 
 // update footer year
 document.getElementById('year').textContent = new Date().getFullYear();
+
+
+// Texte à faire apparaître
+const heroText = "Je conçois des expériences numériques visuelles, rapides et mémorables. Ici se trouvent mes projets et designs.";
+const target = document.getElementById("hero-typewriter");
+const speed = 50; // Vitesse en ms par caractère
+
+let index = 0;
+
+function typeHeroText() {
+  if (index < heroText.length) {
+    target.innerHTML += heroText.charAt(index);
+    index++;
+    setTimeout(typeHeroText, speed);
+  }
+}
+
+// Lancer l'effet après le chargement de la page
+window.addEventListener("DOMContentLoaded", typeHeroText);
