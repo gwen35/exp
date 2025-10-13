@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sites Vitrines — Gwendal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand"><a href="index.html">Portf<span>olio</span></a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html#home">Accueil</a></li>
+          <li><a href="index.html#projects">Projets</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <section class="container">
+      <h1 style="display:flex;align-items:center;gap:10px;">
+        🌐 Sites Vitrines
+      </h1>
+      <p class="subtle">Création et refonte de sites web — HTML, CSS, JavaScript</p>
+
+      <div class="split">
+        <div class="left">
+          <h2>Contexte</h2>
+          <p>
+            Ces projets ont été réalisés pour renforcer mes compétences en développement web front-end.  
+            Le premier correspond à la création de mon <strong>portfolio personnel</strong>, présentant mon parcours, mes projets et mes compétences.  
+            Le second est une <strong>refonte du site vitrine du restaurant</strong où je travaille, afin d’améliorer sa lisibilité, son esthétique et son référencement.
+          </p>
+
+          <h2>Objectifs</h2>
+          <ul>
+            <li>Créer des sites modernes et responsives</li>
+            <li>Optimiser les performances et la lisibilité du code</li>
+            <li>Mettre en avant le design et l’expérience utilisateur</li>
+          </ul>
+
+          <h2>Technologies</h2>
+          <p>HTML · CSS · JavaScript · GitHub Pages</p>
+
+          <h2>Rôles et responsabilités</h2>
+          <ul class="skills">
+            <li>Conception du design</li>
+            <li>Développement front-end complet</li>
+            <li>Animation et interactions</li>
+            <li>Optimisation mobile</li>
+          </ul>
+        </div>
+
+        <div class="right">
+          <div class="card">
+            <img src="https://github.com/gwen35/exp/raw/main/lescale.png" alt="Site du restaurant" style="max-width:100%;border-radius:12px;"/>
+            <div style="padding:12px">
+              <h3>Refonte du site du restaurant</h3>
+              <p class="muted">Projet personnel — modernisation du site de mon lieu de travail</p>
+              <a href="https://github.com/gwen35" target="_blank" class="btn-download">Voir le projet</a>
+            </div>
+          </div>
+
+          <div class="card" style="margin-top:20px;">
+            <img src="https://github.com/gwen35/exp/raw/main/vitrine.png" alt="Portfolio personnel" style="max-width:100%;border-radius:12px;"/>
+            <div style="padding:12px">
+              <h3>Portfolio personnel</h3>
+              <p class="muted">Projet personnel — présentation de mes compétences et de mes réalisations</p>
+              <a href="index.html" class="btn-download">Voir le site</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section style="margin-top:32px;">
+        <h2>Améliorations futures</h2>
+        <ul>
+          <li>Ajout d’une interface d’administration pour le site du restaurant</li>
+          <li>Version anglaise du portfolio</li>
+          <li>Optimisation SEO et performance Lighthouse</li>
+        </ul>
+      </section>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><p>© <span id="year"></span> Gwendal — Portfolio</p></div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
