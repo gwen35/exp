@@ -63,10 +63,16 @@
               <h3>Extraits</h3>
               <p class="muted">Exemple de table, vue et procédure issue du projet.</p>
               <pre style="background:#0b0b0b;color:#e6e6e6;padding:10px;border-radius:8px;overflow:auto;font-size:13px">-- Exemple : création d'une table
-CREATE TABLE utilisateur (
-  id SERIAL PRIMARY KEY,
-  nom VARCHAR(100) NOT NULL,
-  email VARCHAR(150) UNIQUE NOT NULL
+CREATE TABLE Transport (
+mode_de_deplacement VARCHAR(255) PRIMARY KEY
+);
+CREATE TABLE Club (
+nom VARCHAR(255) PRIMARY KEY,
+ville VARCHAR(255),
+division VARCHAR(255),
+budget DECIMAL(15, 2),
+initiatives_ecologiques TEXT,
+valeur_empreinte_carbone DECIMAL(10, 2)  
 );
 </pre>
             </div>
@@ -92,7 +98,7 @@ CREATE TABLE utilisateur (
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
-</html>
-```
+<a href= "download/MORVAN-REGEARD-Rapport-BDD-FOOT-G2.pdf" download= "Documentation Acme (ver. 2.0.1).txt" > Télécharger le texte </a> 
 
----
+</html>
+
