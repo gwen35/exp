@@ -1,0 +1,98 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Base de Données — Gwendal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand"><a href="index.html">Portf<span>olio</span></a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html#home">Accueil</a></li>
+          <li><a href="index.html#projects">Projets</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <section class="container">
+      <h1>Base de Données (Projet universitaire)</h1>
+      <p class="subtle">Conception, modélisation et déploiement — travail d'équipe et évolution du schéma.</p>
+
+      <div class="split">
+        <div class="left">
+          <h2>Contexte</h2>
+          <p>Projet réalisé en équipe dans le cadre d'un cours de bases de données. L'objectif était de concevoir une base relationnelle, d'écrire le modèle conceptuel (MCD), puis le modèle logique (MLD), et enfin déployer la base avec PostgreSQL.</p>
+
+          <h2>Rôles & responsabilités</h2>
+          <ul class="skills">
+            <li>Modélisation (MCD / MLD)</li>
+            <li>Écriture des scripts SQL (tables, contraintes, index)</li>
+            <li>Élaboration des procédures stockées et vues</li>
+            <li>Scripts d'import et de migration</li>
+          </ul>
+
+          <h2>Technologies</h2>
+          <p>PostgreSQL · pgAdmin · SQL · DDL/DML · Git</p>
+
+          <h2>Points marquants</h2>
+          <ul>
+            <li>Conception normalisée jusqu'à la 3ème forme normale</li>
+            <li>Gestion des clés étrangères et intégrité référentielle</li>
+            <li>Requêtes complexes : jointures multiples, agrégations, fenêtres</li>
+            <li>Export / import et scripts de peuplement</li>
+          </ul>
+
+        </div>
+
+        <div class="right">
+          <div class="card">
+            <img src="https://github.com/gwen35/exp/raw/main/bdd.png" alt="Schéma BDD" style="max-width:100%;border-radius:12px;"/>
+            <div style="padding:12px">
+              <h3>Extraits</h3>
+              <p class="muted">Exemple de table, vue et procédure issue du projet.</p>
+              <pre style="background:#0b0b0b;color:#e6e6e6;padding:10px;border-radius:8px;overflow:auto;font-size:13px">-- Exemple : création d'une table
+CREATE TABLE utilisateur (
+  id SERIAL PRIMARY KEY,
+  nom VARCHAR(100) NOT NULL,
+  email VARCHAR(150) UNIQUE NOT NULL
+);
+</pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section style="margin-top:32px">
+        <h2>Améliorations futures</h2>
+        <ul>
+          <li>Automatisation des migrations (Flyway/ Liquibase)</li>
+          <li>Sécurisation : gestion des rôles et des permissions</li>
+          <li>Tests d'intégrité et d'insertion en masse</li>
+        </ul>
+      </section>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container"><p>© <span id="year"></span> Gwendal — Portfolio</p></div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+```
+
+---
