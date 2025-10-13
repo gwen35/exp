@@ -231,3 +231,24 @@ nav a:hover{color:#fff;background:rgba(255,255,255,0.03)}
   background-color: #444;
   align-items: center; 
 }
+
+ /* --- STYLE SPÉCIFIQUE AUX IMAGES DE LA PAGE --- */
+    .image-frame {
+      border: 1px solid #ff7a00; /* orange accent */
+      border-radius: 16px;
+      overflow: hidden;
+      padding: 4px;
+      background-color: rgba(255, 122, 0, 0.08); /* légère teinte de fond */
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-frame img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .image-frame:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(255, 122, 0, 0.25);
+    }

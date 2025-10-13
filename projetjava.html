@@ -1,29 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Test - Gwendal</title>
-
-  <!-- styles -->
+  <title>Projets Java — Gwendal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script defer src="script.js"></script>
+  <style>
+    /* Style spécifique aux images encadrées */
+    .image-frame {
+      border: 3px solid #ff7a00;
+      border-radius: 16px;
+      overflow: hidden;
+      padding: 4px;
+      background-color: rgba(255, 122, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .image-frame img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+    .image-frame:hover {
+      transform: scale(1.02);
+      box-shadow: 0 6px 20px rgba(255, 122, 0, 0.25);
+    }
+  </style>
 </head>
 <body>
-
-  <header>
-    <h1>Test de projet</h1>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand"><a href="index.html">Portf<span>olio</span></a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html#home">Accueil</a></li>
+          <li><a href="index.html#projects">Projets</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Bienvenue sur la page de test</h2>
-      <p>Ceci est un exemple de contenu pour la page de test.</p>
+  <main class="section">
+    <section class="container">
+      <h1 style="display:flex;align-items:center;gap:10px;">☕ Projets Java</h1>
+      <p class="subtle">Programmation orientée objet — Interface graphique — JSON</p>
+
+      <div class="split">
+        <div class="left">
+          <h2>Contexte</h2>
+          <p>
+            Ces projets Java ont été développés dans le cadre de travaux universitaires.  
+            Ils m’ont permis d’approfondir mes compétences en <strong>programmation orientée objet</strong>, en gestion de données, et en conception d’interfaces graphiques.
+          </p>
+
+          <h2>Objectifs</h2>
+          <ul>
+            <li>Concevoir des programmes modulaires et maintenables</li>
+            <li>Utiliser des structures de données adaptées</li>
+            <li>Gérer des interfaces utilisateur intuitives</li>
+            <li>Implémenter des fonctionnalités avancées (sauvegarde, JSON, logique de jeu)</li>
+          </ul>
+
+          <h2>Technologies</h2>
+          <p>Java · Swing · AWT · JSON · UML · Git</p>
+
+          <h2>Compétences développées</h2>
+          <ul class="skills">
+            <li>Architecture orientée objet (classes, héritage, interfaces)</li>
+            <li>Gestion d’événements et d’interfaces graphiques</li>
+            <li>Lecture et écriture de fichiers JSON</li>
+            <li>Gestion du rendu et des boucles de jeu</li>
+          </ul>
+        </div>
+
+        <div class="right">
+          <!-- Projet 1 : Tower Defense -->
+          <div class="card">
+            <div class="image-frame">
+              <img src="https://github.com/gwen35/exp/raw/main/projetBriac.png" alt="Projet Tower Defense Java" />
+            </div>
+            <div style="padding:12px">
+              <h3>Jeu Tower Defense 🏰</h3>
+              <p class="muted">
+                Projet universitaire — développement complet d’un jeu Tower Defense en Java, avec logique de jeu, vagues d’ennemis, gestion de tours et interface graphique.
+              </p>
+              <a href="https://github.com/gwen35" target="_blank" class="btn-download">Voir le projet</a>
+            </div>
+          </div>
+
+                    <!-- Projet 2 : Générateur de diagrammes -->
+          <div class="card" style="margin-top: 2rem;">
+            <div class="image-frame">
+              <img src="https://github.com/gwen35/exp/raw/main/gensite.png" alt="Projet Générateur de Diagrammes Java" />
+            </div>
+            <div style="padding:12px">
+              <h3>Générateur de Diagrammes 🧩</h3>
+              <p class="muted">
+                Application Java avec interface graphique permettant de créer et visualiser des diagrammes à partir de données JSON.  
+                Ce projet met l’accent sur la conception orientée objet, la sérialisation et la manipulation dynamique d’éléments graphiques.
+              </p>
+              <a href="Rapport.pdf" download class="btn-download">Rapport 🗃️</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2023 Gwendal. Tous droits réservés.</p>
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Gwendal — Portfolio</p>
+    </div>
   </footer>
 
+  <script>
+    // Animation du chargement des sections
+    ScrollReveal().reveal('.card', {
+      distance: '30px',
+      origin: 'bottom',
+      duration: 800,
+      interval: 150
+    });
+
+    // Mise à jour automatique de l'année
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
