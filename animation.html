@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Animations 3D — Gwendal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <div class="brand"><a href="index.html">Portf<span>olio</span></a></div>
+      <nav>
+        <ul>
+          <li><a href="index.html#home">Accueil</a></li>
+          <li><a href="index.html#projects">Projets</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <section class="container">
+      <h1 style="display: flex; align-items: center; gap: 10px;">
+        🎮 Animations 3D — Unreal Engine
+      </h1>
+      <p class="subtle">Création d’animations et intégration dans Unreal Engine 5 — pipeline complet 3D.</p>
+
+      <div class="split">
+        <div class="left">
+          <h2>Contexte</h2>
+          <p>Projet de création d’animations 3D dans le cadre d’un apprentissage des outils de modélisation et de moteur de jeu.  
+          L’objectif était de concevoir un personnage, d’animer ses mouvements, puis d’intégrer le tout dans Unreal Engine pour une démonstration en temps réel.</p>
+
+          <h2>Étapes principales</h2>
+          <ul class="skills">
+            <li>Modélisation du personnage dans Maya</li>
+            <li>Texturing avec Substance 3D Painter</li>
+            <li>Rigging et animation</li>
+            <li>Importation et configuration dans Unreal Engine 5</li>
+            <li>Création d’une scène interactive</li>
+          </ul>
+
+          <h2>Technologies</h2>
+          <p>Autodesk Maya · Substance 3D Painter · Unreal Engine 5 · Blueprint · Photoshop</p>
+
+          <h2>Objectifs & compétences développées</h2>
+          <ul>
+            <li>Maîtriser le workflow complet du pipeline 3D</li>
+            <li>Comprendre les contraintes d’importation dans un moteur de jeu</li>
+            <li>Travailler la cohérence entre textures, matériaux et lumières</li>
+          </ul>
+        </div>
+
+        <div class="right">
+          <div class="card">
+            <img src="https://github.com/gwen35/exp/raw/main/m1.png" alt="Animation Unreal Engine" style="max-width:100%;border-radius:12px;" />
+            <div style="padding:12px">
+              <h3>Extrait du projet</h3>
+              <p class="muted">Personnage animé et intégré dans une scène Unreal Engine 5.</p>
+              <video controls style="width:100%;border-radius:12px;">
+                <source src="https://github.com/gwen35/exp/raw/main/videom1.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas la lecture vidéo.
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top: 25px; text-align: center;">
+        <a href="rapport-animation.pdf" download class="btn-download">
+          Télécharger le rapport 🎬
+        </a>
+      </div>
+
+      <div style="margin-top: 25px; text-align: center;">
+        <a href="scene-unreal.zip" download class="btn-download">
+          Fichiers du projet 💾
+        </a>
+      </div>
+
+      <section style="margin-top:32px">
+        <h2>Améliorations futures</h2>
+        <ul>
+          <li>Ajout d’un système d’interaction via Blueprint</li>
+          <li>Optimisation des textures pour le rendu temps réel</li>
+          <li>Création d’un environnement complet</li>
+        </ul>
+      </section>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> Gwendal — Portfolio</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
