@@ -82,7 +82,7 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
 
 // Texte à faire apparaître
-const heroText = "Je conçois des expériences numériques visuelles, rapides et mémorables. Ici se trouvent mes projets et designs.";
+const heroText = "J’ai créé ce portfolio pour vous faire découvrir qui je suis, ce que je fais et comment je le fais, mais surtout pour partager ma passion avec vous";
 const target = document.getElementById("hero-typewriter");
 const speed = 50; // Vitesse en ms par caractère
 
