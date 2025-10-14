@@ -96,6 +96,27 @@ function typeHeroText() {
   }
 }
 
+
+const form = document.querySelector("form");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const data = new FormData(form);
+  const response = await fetch(form.action, {
+    method: "POST",
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    alert("Merci ! Ton message a bien été envoyé 😊");
+    form.reset();
+  } else {
+    alert("Une erreur est survenue 😢. Réessaie plus tard.");
+  }
+});
+
+
 // Lancer l'effet après le chargement de la page
 window.addEventListener("DOMContentLoaded", typeHeroText);
 
